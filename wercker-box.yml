@@ -75,11 +75,6 @@ script : |
   curl -sS https://getcomposer.org/installer | php
   sudo mv composer.phar $prefix/bin/composer
   sudo chmod +x $prefix/bin/composer
-
-  # Install DBunit and DBunit
-  sudo pear config-set auto_discover 1
-  sudo pear install phpunit/PHPUnit
-  sudo pear install phpunit/DbUnit
   
   # Install atoum
   wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
@@ -100,12 +95,7 @@ script : |
   curl -sS https://getcomposer.org/installer | php
   sudo mv composer.phar $prefix/bin/composer
   sudo chmod +x $prefix/bin/composer
-
-  # Install DBunit and DBunit
-  sudo pear config-set auto_discover 1
-  sudo pear install phpunit/PHPUnit
-  sudo pear install phpunit/DbUnit
-  
+ 
   # Install atoum
   wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
   chmod +x mageekguy.atoum.phar
@@ -125,20 +115,11 @@ script : |
   sudo mv composer.phar $prefix/bin/composer
   sudo chmod +x $prefix/bin/composer
 
-  # Install DBunit and DBunit
-  sudo pear config-set auto_discover 1
-  sudo pear install phpunit/PHPUnit
-  sudo pear install phpunit/DbUnit
-  
   # Install atoum
   wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
   chmod +x mageekguy.atoum.phar
   sudo mv mageekguy.atoum.phar $prefix/bin/atoum
   sudo chmod +x $prefix/bin/atoum
-
-
-
-
 
 default-build:
   php-composer-phpunit:
